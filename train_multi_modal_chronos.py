@@ -1,6 +1,6 @@
 import argparse
 import os
-from MultiModalChronos import MultiModalChronosConfig, MultiModalChronosModel, MultiModalChronosDataset
+from models.MultiModalChronos import MultiModalChronosConfig, MultiModalChronosModel, MultiModalChronosDataset
 from transformers import Trainer, TrainingArguments, set_seed
 import torch
 from safetensors.torch import save_file

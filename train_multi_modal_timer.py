@@ -1,6 +1,6 @@
 import argparse
 import os
-from MultiModalTimer import MultiModalTimerConfig, MultiModalTimerModel, MultiModalTimerDataset
+from models.MultiModalTimer import MultiModalTimerConfig, MultiModalTimerModel, MultiModalTimerDataset
 from transformers import Trainer, TrainingArguments, set_seed
 import torch
 from safetensors.torch import save_file

@@ -1,7 +1,7 @@
 import os
 import argparse
 import numpy as np
-from MultiModalTimer import MultiModalTimerConfig, MultiModalTimerModel, MultiModalTimerDataset
+from models.MultiModalTimer import MultiModalTimerConfig, MultiModalTimerModel, MultiModalTimerDataset
 from transformers import Trainer, TrainingArguments
 from safetensors.torch import load_file
 

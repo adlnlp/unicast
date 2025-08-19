@@ -1,5 +1,30 @@
 # UniCast: A Unified Multimodal Prompting Framework for Time Series Forecasting
-Implementation of multimodal time-series forecasting framework in UniCast: A Unified Multimodal Prompting Framework for Time Series Forecasting
+Implementation of multimodal time-series forecasting framework in [UniCast: A Unified Multimodal Prompting Framework for Time Series Forecasting](http://arxiv.org/abs/2508.11954)
+
+<div align="center">
+      <p>
+        <strong>Sehyuk Park</strong><sup>1</sup>,
+        <strong>Soyeon Caren Han</strong><sup>1, 2</sup>
+        <strong>Eduard Hovy</strong><sup>2</sup>
+      </p>
+</div>
+
+<div align="center">
+    <p>
+        <sup>1</sup> Pohang University of Science and Technology
+        <sup>2</sup> The University of Melbourne
+    </p>
+</div>
+
+<div align="center">
+<p>
+      <sup>1</sup> <a href="mailto:percy212@postech.ac.kr,">percy212@postech.ac.kr</a>,  
+      <a href="mailto:drcarenhan@postech.ac.kr">drcarenhan@postech.ac.kr</a> 
+      <sup>2</sup> <a href="mailto:caren.han@unimelb.edu.au">caren.han@unimelb.edu.au</a>,  
+      <a href="mailto:eduard.hovy@unimelb.edu.au">eduard.hovy@unimelb.edu.au</a>
+</p>
+</div>
+
 ![Model Figure](./figures/Model_Structure.png)
 ## Requirements
 This project leverages two Time-Series Foundation Models: **Timer** and **Chronos**.  
@@ -36,6 +61,7 @@ For converting time-series data into images, we follow the plotting approach use
 
 To generate the datasets, simply run:
 ```bash
+cd dataset
 bash create_dataset.sh
 ```
 ## Pretrained Models
@@ -49,6 +75,7 @@ For each model, a `save_pretrained_model.py` script is provided in its respectiv
 
 To download and save all pretrained models, simply run:
 ```bash
+cd models
 bash save_pretrained_model.sh
 ```
 
@@ -74,3 +101,17 @@ When compared with six baseline models, **UniCast** achieved better performance 
 ![Qualitative Analysis](./figures/qa.png)
 The figure compares four configurations: **TSFM Zero-Shot**, **TSFM with Prompt Tuning**, **TSFM with Vision Encoder**, and **TSFM with both Vision and Text Encoders**. 
 It shows that adding more modalities enables the model to capture patterns more effectively.
+
+## Citation
+If you find our UniCast framework helpful, we would appreciate it if you could cite our paper.
+```bibtex
+@misc{park2025unicastunifiedmultimodalprompting,
+      title={UniCast: A Unified Multimodal Prompting Framework for Time Series Forecasting}, 
+      author={Sehyuk Park and Soyeon Caren Han and Eduard Hovy},
+      year={2025},
+      eprint={2508.11954},
+      archivePrefix={arXiv},
+      primaryClass={cs.AI},
+      url={https://arxiv.org/abs/2508.11954}, 
+}
+```

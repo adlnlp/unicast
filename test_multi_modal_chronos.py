@@ -1,7 +1,7 @@
 import os
 import argparse
 import numpy as np
-from MultiModalChronos import MultiModalChronosConfig, MultiModalChronosModel, MultiModalChronosDataset
+from models.MultiModalChronos import MultiModalChronosConfig, MultiModalChronosModel, MultiModalChronosDataset
 from transformers import Trainer, TrainingArguments
 from safetensors.torch import load_file
 
