@@ -41,7 +41,7 @@ Other dependencies can be installed from the corresponding `requirements.txt` fi
 ```bash
 conda create -n timer python=3.10.16
 conda activate timer
-pip install -r timer_requirements.txt
+pip install -r requirements/timer_requirements.txt
 ```
 
 **Chronos:**
@@ -49,7 +49,7 @@ pip install -r timer_requirements.txt
 ```bash
 conda create -n chronos python=3.11.11
 conda activate chronos
-pip install -r chronos_requirements.txt
+pip install -r requirements/chronos_requirements.txt
 ```
 
 ## Dataset Preparation
@@ -85,18 +85,27 @@ These scripts are configured to iterate over different combinations of **vision 
 
 - To train:
 ```bash
-bash train_multi_modal_tsfm.sh
+# For Timer
+bash train_multi_modal_timer.sh
+
+# For Chronos
+bash train_multi_modal_chronos.sh
 ```
 - To evaluate:
 
 ```bash
-bash test_multi_modal_tsfm.sh
+# For Timer
+bash test_multi_modal_timer.sh
+
+# For Chronos
+bash test_multi_modal_chronos.sh
 ```
 
 ## Evaluation Results
 ![Result](./figures/Results.jpg)
 When compared with six baseline models, **UniCast** achieved better performance in a parameter-efficient manner while keeping the backbone frozen.
-
+![Ablation](./figures/Ablation.jpg)
+Incorporating either visual or textual context improves performance over the time-series-only model, while combining both modalities consistently yields the best results.
 ## Qualitative Analysis
 ![Qualitative Analysis](./figures/qa.png)
 The figure compares four configurations: **TSFM Zero-Shot**, **TSFM with Prompt Tuning**, **TSFM with Vision Encoder**, and **TSFM with both Vision and Text Encoders**. 
